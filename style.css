@@ -1,0 +1,131 @@
+/* Estilo general de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Cambia a la fuente especificada en Figma */
+    font-size: 16px;
+    color: #333;
+    background-color: #B3C7E6; /* Cambia este color según el enlace de Figma */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal dividido en dos partes */
+.container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 50px); /* Ajusta la altura para dejar espacio para el pie de página */
+}
+
+/* Parte izquierda: Campo de entrada */
+.left {
+    flex: 1;
+    padding: 20px;
+    background-color: #B3C7E6; /* Cambia este color según el enlace de Figma */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Área de texto */
+textarea {
+    width: 100%;
+    flex: 1; /* Expande para llenar el espacio disponible */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Espacio entre el área de texto y los botones */
+    resize: none; /* Evita el redimensionamiento del área de texto */
+}
+
+/* Contenedor para los botones de cifrar y descifrar */
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio entre el área de texto y los botones */
+    flex-shrink: 0; /* Evita que el contenedor de botones se reduzca */
+}
+
+/* Botones de cifrar y descifrar */
+button {
+    padding: 6px 12px; /* Tamaño reducido para los botones */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #003366; /* Cambia este color según el enlace de Figma */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    min-width: 80px; /* Ancho mínimo para los botones */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #D8DFE8; /* Cambia este color según el enlace de Figma */
+    transform: scale(1.05);
+}
+
+/* Botón de copiar, ubicado debajo del área de visualización */
+#copyBtn {
+    background-color: #003366; /* Cambia este color según el enlace de Figma */
+    margin-top: 10px; /* Espacio entre el área de visualización y el botón de copiar */
+    padding: 6px 12px; /* Tamaño reducido para el botón de copiar */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    min-width: 80px; /* Ancho mínimo para el botón de copiar */
+    text-align: center;
+    align-self: flex-end; /* Alinea el botón a la derecha */
+}
+
+#copyBtn:hover {
+    background-color: #D8DFE8; /* Cambia este color según el enlace de Figma */
+}
+
+/* Parte derecha: Área de presentación */
+.right {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Cambia este color según el enlace de Figma */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajusta la alineación vertical */
+    position: relative;
+}
+
+/* Área de visualización del texto */
+#output {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-image: url('imagen.png'); /* Reemplaza con la ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra el área */
+    background-position: center;
+    flex: 1; /* Hace que el área de visualización se expanda para llenar el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Ajusta la altura mínima según sea necesario */
+}
+
+/* Mensaje de validación */
+#validationMessage {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Pie de página */
+footer {
+    padding: 10px;
+    background-color: #B3C7E6; /* Cambia este color según el enlace de Figma */
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
